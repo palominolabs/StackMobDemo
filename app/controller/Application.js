@@ -4,11 +4,20 @@ Ext.define('StackMobDemo.controller.Application', {
     config: {
         refs: {
             fetchMeatsButton: 'button[action=fetchMeats]',
-            mainView: '#mainView'
+            mainView: '#mainView',
+            addButton: '#addButton',
+            meatList: '#meatList'
         },
         control: {
             fetchMeatsButton: {
                 tap: 'onFetchMeatsButtonTap'
+            },
+            mainView: {
+                push: 'onMainViewPush',
+                pop: 'onMainViewPop'
+            },
+            addButton: {
+                tap: 'onAddButtonTap'
             }
         }
     },
@@ -17,5 +26,29 @@ Ext.define('StackMobDemo.controller.Application', {
         this.getMainView().push({
             xclass: 'StackMobDemo.view.List'
         })
+    },
+
+    onMainViewPush: function(view, item) {
+        this.getAddButton().show();
+    },
+
+    onMainViewPop: function(view, item) {
+        this.getAddButton().hide();
+    },
+
+    onAddButtonTap: function() {
+        Ext.Msg.prompt('Add Meat', 'What kind of meat?', this.onSubmitMeat, this, false, null, {
+            autoCapitalize: true,
+            placeHolder: 'No vegetables, please...'
+        })
+    },
+
+    onSubmitMeat: function(buttonId, value) {
+        var newMeat = Ext.create('StackMobDemo.model.Meat', {
+            name: value
+        });
+        var store = this.getMeatList().getStore();
+        store.add(newMeat);
+        store.sync();
     }
 });

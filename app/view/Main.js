@@ -13,6 +13,18 @@ Ext.define("StackMobDemo.view.Main", {
                 action: 'fetchMeats',
                 centered: true
             }]
-        }]
+        }],
+
+        navigationBar: {
+            items: [{
+                xtype: 'button',
+                id: 'addButton',
+                action: 'addMeat',
+                iconCls: 'add',
+                iconMask: true,
+                align: 'right',
+                hidden: true
+            }]
+        }
     }
 });

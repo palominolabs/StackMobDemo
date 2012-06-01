@@ -1,7 +1,7 @@
 Ext.define('StackMobDemo.view.List', {
     extend: 'Ext.List',
 
-    id: 'meatsView',
+    id: 'meatList',
 
     config: {
         title: 'Meats',
