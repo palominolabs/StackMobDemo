@@ -44,6 +44,9 @@ Ext.define('StackMobDemo.controller.Application', {
     },
 
     onSubmitMeat: function(buttonId, value) {
+        if (buttonId == 'cancel') {
+            return false;
+        }
         var newMeat = Ext.create('StackMobDemo.model.Meat', {
             name: value
         });
