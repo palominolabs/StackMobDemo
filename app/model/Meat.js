@@ -4,7 +4,7 @@ Ext.define('StackMobDemo.model.Meat', {
     config: {
         idProperty: 'meat_id',
         fields: [
-            'meat_id',
+            {name: 'meat_id', type: 'auto', persist: false},
             'name'
         ]
     }
