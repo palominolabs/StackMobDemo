@@ -1,29 +1,23 @@
 Ext.define("StackMobDemo.view.Main", {
     extend: 'Ext.navigation.View',
 
+    requires: ['StackMobDemo.view.List'],
+
     id: 'mainView',
     
     config: {
         
         items: [{
-            title: 'Welcome',
-            items: [{
-                xtype: 'button',
-                text: 'Fetch Some Meats',
-                action: 'fetchMeats',
-                centered: true
-            }]
+            xclass: 'StackMobDemo.view.List'
         }],
 
         navigationBar: {
             items: [{
                 xtype: 'button',
                 id: 'addButton',
-                action: 'addMeat',
                 iconCls: 'add',
                 iconMask: true,
-                align: 'right',
-                hidden: true
+                align: 'right'
             }]
         }
     }

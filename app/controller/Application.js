@@ -3,37 +3,14 @@ Ext.define('StackMobDemo.controller.Application', {
 
     config: {
         refs: {
-            fetchMeatsButton: 'button[action=fetchMeats]',
-            mainView: '#mainView',
             addButton: '#addButton',
             meatList: '#meatList'
         },
         control: {
-            fetchMeatsButton: {
-                tap: 'onFetchMeatsButtonTap'
-            },
-            mainView: {
-                push: 'onMainViewPush',
-                pop: 'onMainViewPop'
-            },
             addButton: {
                 tap: 'onAddButtonTap'
             }
         }
-    },
-
-    onFetchMeatsButtonTap: function() {
-        this.getMainView().push({
-            xclass: 'StackMobDemo.view.List'
-        })
-    },
-
-    onMainViewPush: function(view, item) {
-        this.getAddButton().show();
-    },
-
-    onMainViewPop: function(view, item) {
-        this.getAddButton().hide();
     },
 
     onAddButtonTap: function() {
