@@ -9,7 +9,7 @@ Ext.define('StackMobDemo.store.Meats', {
         sorters: 'name',
         proxy: {
             type: 'stackmob',
-            url: 'http://dev.stackmobdemo.andrewmitchell.stackmobapp.com/meat'
+            url: 'meat'
         }
     }
 });
