@@ -4,7 +4,7 @@ Ext.define('StackMobDemo.data.proxy.StackMob', {
 
     config: {
         headers: {
-            'Accept': 'application/vnd.stackmob+json; version=1',
+            'Accept': 'application/vnd.stackmob+json; version=0',
             'X-StackMob-Proxy': 'stackmob-api',
             'X-StackMob-User-Agent': 'StackMob (JS; 0.2.1)/stackmobdemo'
         },
