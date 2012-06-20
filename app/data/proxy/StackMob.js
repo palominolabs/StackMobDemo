@@ -4,13 +4,13 @@ Ext.define('StackMobDemo.data.proxy.StackMob', {
 
     config: {
         headers: {
-            'Accept': 'application/vnd.stackmob+json; version=0',
+            'Accept': 'application/vnd.stackmob+json; version=1',
             'X-StackMob-Proxy': 'stackmob-api',
             'X-StackMob-User-Agent': 'StackMob (JS; 0.2.1)/stackmobdemo'
         },
 
         // Disable cache busting / paging for now, since StackMob rejects the GET params added by ServerProxy.
-        // TODO: re-implement these in a StackMob-compliant manner (request headers) 
+        // TODO: re-implement these in a StackMob-compliant manner (request headers)
         noCache: false,
         pageParam: false,
         startParam: false,
