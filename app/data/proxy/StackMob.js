@@ -10,7 +10,7 @@ Ext.define('StackMobDemo.data.proxy.StackMob', {
         },
 
         // Disable cache busting / paging for now, since StackMob rejects the GET params added by ServerProxy.
-        // TODO: re-implement these in a StackMob-compliant manner (request headers)
+        // TODO: re-implement these in a StackMob-compliant manner (request headers) 
         noCache: false,
         pageParam: false,
         startParam: false,
